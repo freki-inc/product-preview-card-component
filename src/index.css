@@ -1,0 +1,336 @@
+/* montserrat-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/montserrat-v31-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* montserrat-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/montserrat-v31-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* fraunces-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/fraunces-v38-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  /* color properties */
+  --text-color: #6C7289;
+  --text-color-h1: #1C232B;
+  --text-color-price: #3D8168; 
+  --text-color-btn: #FFFFFF;
+  --main-color-bg: #F2EAE2;
+  --card-color-bg: #FFFFFF;
+  --btn-color: #3D8168;
+  --btn-color-hover: #1A4032;
+
+  /* font properties */
+  --montserrat: 'Montserrat', 'Segoe UI', Roboto, sans-serif;
+  --fraunces: 'Fraunces', 'Segoe UI', Roboto, sans-serif;
+
+  --font: var(--montserrat);
+  --h1-font: var(--fraunces);
+  --price-font: var(--fraunces);
+}
+
+/* Resets */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* Page style */
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color-bg);
+  font-family: var(--font);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+/* card wrapper style */
+.card-wrapper {
+  width: 350px;
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* card top style */
+.card-top {
+  width: 350px;
+  height: 342px;
+}
+
+.image-card {
+  width: 350px;
+  height: 342px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* card bottom style */
+.card-bottom {
+  width: 350px;
+  height: 408px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--card-color-bg);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* text card bottom style */
+.text-wrapper {
+  width: 100%;
+  height: 214px;
+  margin-bottom: 24px;
+}
+
+.text-wrapper p {
+  color: var(--text-color);
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 12px;
+  line-height: 120%;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: var(--fraunces);
+  line-height: 100%;
+  letter-spacing: 0px;
+  margin-bottom: 24px;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 160%;
+  letter-spacing: 0px;
+}
+
+/* price card bottom style */
+.price-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.price {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: var(--fraunces);
+  color: var(--text-color-price);
+  line-height: 100%;
+  letter-spacing: 0px;
+  margin-right: 16px;
+}
+
+.old-price {
+  font-size: 13px;
+  font-family: var(--montserrat);
+  color: var(--text-color);
+  line-height: 120%;
+  letter-spacing: 0px;
+  text-decoration: line-through;
+}
+
+/* button style */
+button {
+  width: 286px;
+  height: 50px;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--btn-color);
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: var(--montserrat);
+  color: var(--text-color-btn);
+  line-height: 110%;
+  letter-spacing: 0px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--btn-color-hover);
+}
+
+.btn-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+/* footer style */
+footer {
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 0.5rem;
+  font-size: 8px; 
+  text-align: center;
+}
+
+footer a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* media queries */
+
+/** Adjusts positioning for very small mobile device screens **/
+@media(max-width: 390px) {
+  .card-wrapper {
+    width: 300px;
+    height: 650px;
+  }
+
+  .card-top {
+    width: 300px;
+    height: 292px;
+  }
+
+  .image-card {
+    width: 300px;
+    height: 292px;
+  }
+
+  .card-bottom {
+    width: 300px;
+    height: 338px;
+    padding: 32px;
+  }
+
+  .text-wrapper {
+    width: 100%;
+    height: 164px;
+  }
+
+  .text-wrapper p {
+    margin-bottom: 16px;
+  }
+
+  .title {
+    font-size: 10px;
+  }
+
+  h1 {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .price-wrapper {
+    justify-content: left;
+  }
+
+  .price {
+    font-size: 28px;
+    margin-right: 16px;
+  }
+
+  .old-price {
+    font-size: 11px;
+  }
+
+  button {
+    width: 236px;
+    height: 40px;
+    padding: 14px 28px;
+    font-size: 12px;
+  }
+
+  .btn-icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 6px;
+  }
+}
+
+/** Adjusts positioning for tablet screens **/
+@media(min-width: 768px) {
+  .card-wrapper {
+    width: 600px;
+    height: 456px;
+    flex-direction: row;
+  }
+
+  .card-top {
+    width: 300px;
+    height: 456px;
+  }
+
+  .image-card {
+    width: 300px;
+    height: 456px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 0px;
+    background-size: contain;
+  }
+
+  .card-bottom {
+    width: 300px;
+    height: 456px;
+    padding: 32px;
+    justify-content: flex-start;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  .text-wrapper {
+    width: 236px;
+    height: 246px;
+    margin-bottom: 32px;
+  }
+
+  .price-wrapper {
+    margin-bottom: 32px;
+  }
+
+  button {
+    width: 236px;
+    height: 50px;
+  }
+}
